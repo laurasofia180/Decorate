@@ -4,30 +4,10 @@
       <title>D&D</title>
       <link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
-
     <div class="page-header">
         <h1> Decorate and Desing </h1>
     </div>
     <body>
-    <%= form_tag("/view/index", method: "post") do %>
-       <div class="row container">
-         <div class="col-md-6 col-md-offset-4">
-           <table class="table table-striped">
-             <%= label_tag(:E, "Edad") %>
-             <%= text_field_tag(:E) %>
-             <%= label_tag(:G, "Genero") %>
-             <%= radio_button_tag(:G, value="Femenino",name="sexo") %> Femenino
-             <%= radio_button_tag(:G, value="Masculino",name="sexo") %> Masculino
-             <%= label_tag(:S, "Estilo") %>
-             <%= radio_button_tag(:S, value="Clasico",name="estilo") %> Clasico
-             <%= radio_button_tag(:S, value="Moderno",name="estilo") %> Moderno
-             <%= radio_button_tag(:S, value="Retro",name="estilo") %> Retro
-             <%= submit_tag("Enviar") %>
-            <% end %>
-            </table>
-          </div>
-       </div>
-    <!--Entraste esto: <%= @request %>-->
-     <!--<p> D&D </p>-->
+
     </body>
   </html>
