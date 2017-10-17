@@ -15,17 +15,17 @@
 
     <div class="field">
       <%= f.label :genero %>
-      <%= f.radio_button :genero, "sexo" %> Femenino
-      <%= f.radio_button :genero, "sexo" %> Masculino
+      <%= f.radio_button :genero, true %> Femenino
+      <%= f.radio_button :genero, false %> Masculino
     </div>
     <%= label_tag(:E, "Edad") %>
     <%= text_field_tag(:E) %>
 
     <div class="field">
     <%= f.label :estilo %>
-    <%= f.radio_button :estilo, "estilo" %> Clasico
-    <%= f.radio_button :estilo, "estilo" %> Moderno
-    <%= f.radio_button :estilo, "estilo" %> Retro
+    <%= f.radio_button :estilo, "clasico" %> Clasico
+    <%= f.radio_button :estilo, "moderno" %> Moderno
+    <%= f.radio_button :estilo, "retro" %> Retro
     </div>
 
     <div class="field">
