@@ -1,24 +1,31 @@
-# README
+# Decorate and Desing 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+* Ruby 2.4.0
 
-* Ruby version
+* MySQL 5.7
 
-* System dependencies
+#### Uso
 
-* Configuration
+###### gems especiales
 
-* Database creation
+* mysql2: para la base de datos 
+* devise: manejo de login
 
-* Database initialization
+###### Prerequisitos
 
-* How to run the test suite
+* mysql instalado con user: root y password: root
 
-* Services (job queues, cache servers, search engines, etc.)
+###### Instalación 
 
-* Deployment instructions
+`https://github.com/laurasofia180/Decorate.git`
 
-* ...
+
+`cd Decorate`
+
+
+`bundle install`
+
+
