@@ -18,8 +18,11 @@
       <%= f.radio_button :genero, true %> Femenino
       <%= f.radio_button :genero, false %> Masculino
     </div>
-    <%= label_tag(:E, "Edad") %>
-    <%= text_field_tag(:E) %>
+
+    <div class="field">
+       <%= label_tag(:E, "Edad") %>
+       <%= text_field_tag(:E) %>
+    </div>
 
     <div class="field">
     <%= f.label :estilo %>
