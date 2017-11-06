@@ -24,22 +24,22 @@
 #  <<: *default
 #  database: db/production.sqlite3
 
-default: &default
+efault: &default
   adapter: mysql2
   encoding: utf8
-  username: root
-  password: root
-  host: 127.0.0.1
-  port: 3306
+  username: admin
+  password: decorate123
+  host: sl-us-south-1-portal.8.dblayer.com
+  port: 26927
 
 development:
   <<: *default
-  database: decorate_devel
+  database: decorate_dev
 
 test:
   <<: *default
-  database: test_db_name
+  database: decorate_test
 
 production:
   <<: *default
-  database: production_db_name
+  database: decorate_prod

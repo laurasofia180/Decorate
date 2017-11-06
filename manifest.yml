@@ -1,0 +1,4 @@
+applications:
+  - name: decorate_and_design
+    random-route: true
+    memory: 512M
