@@ -1,4 +1,8 @@
 applications:
   - name: decorate_and_design
     random-route: true
-    memory: 512M
+    memory: 256M
+    instances: 1
+    buildpack: ruby_buildpack
+    path: .
+    command: bundle exec rake db:migrate && bundle exec rails s -p $PORT -e production

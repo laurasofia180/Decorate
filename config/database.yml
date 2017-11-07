@@ -24,13 +24,13 @@
 #  <<: *default
 #  database: db/production.sqlite3
 
-efault: &default
+default: &default
   adapter: mysql2
   encoding: utf8
   username: admin
   password: decorate123
-  host: sl-us-south-1-portal.8.dblayer.com
-  port: 26927
+  host:  sl-us-south-1-portal.3.dblayer.com
+  port: 27028
 
 development:
   <<: *default
