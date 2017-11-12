@@ -27,19 +27,24 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  username: admin
-  password: decorate123
-  host:  sl-us-south-1-portal.3.dblayer.com
-  port: 27028
+  username: root
+  password: root
+  host:  127.0.0.1
+  port:  3306
 
 development:
   <<: *default
-  database: decorate_dev
+  database: decorate_devel
 
 test:
   <<: *default
-  database: decorate_test
+  database: test_db_name
 
 production:
-  <<: *default
-  database: decorate_prod
+   adapter: mysql2
+   encoding: utf8
+   username: admin
+   password: decorate123
+   host:  sl-us-south-1-portal.3.dblayer.com
+   port:   27141
+   database: decorate_prod
