@@ -9,15 +9,21 @@
 </head>
 
 <header>
-  <% if user_signed_in? %>
-      <li>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-      </li>
-  <% else %>
-      <li>
-        <%= link_to('Login', new_user_session_path) %>
-      </li>
-  <% end %>
+  <ul class="decorate-nav">
+    <li>
+      <a href="/">Inicio</a>
+    </li>
+    <% if user_signed_in? %>
+        <li class="to-the-right">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </li>
+    <% else %>
+        <li class="to-the-right">
+          <%= link_to('Login', new_user_session_path) %>
+        </li>
+    <% end %>
+  </ul>
+
 </header>
 
 <body>

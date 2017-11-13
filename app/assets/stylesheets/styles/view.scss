@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 
-.mobile-message{
+.mobile-message {
   @media only screen and (min-width: 1024px) {
     display: none;
   }
@@ -29,78 +29,78 @@ body {
   vertical-align: middle;
 }
 
-  .inner {
-    background: image_url('Fondo_Landing.png');
+.inner {
+  background: image_url('Fondo_Landing.png');
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: 500px;
+  text-align: center;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    background: image_url('Silla_Izq.jpg');
     background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-    height: 500px;
-    text-align: center;
-    position: relative;
+    width: 200px;
+    height: 310px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -195px;
+    top: -30px;
+  }
 
-    &:before {
-      content: ' ';
-      background: image_url('Silla_Izq.jpg');
-      background-size: cover;
-      width: 200px;
-      height: 310px;
-      display: block;
+  &:after {
+    content: ' ';
+    background: image_url('Planta_Der.png');
+    background-size: cover;
+    width: 150px;
+    height: 170px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 390px;
+    right: -65px;
+  }
+
+  .logo-wp {
+    img {
       position: absolute;
-      z-index: -1;
-      left: -195px;
-      top: -30px;
-    }
-
-    &:after {
-      content: ' ';
-      background: image_url('Planta_Der.png');
-      background-size: cover;
-      width: 150px;
-      height: 170px;
-      display: block;
-      position: absolute;
-      z-index: -1;
-      top: 390px;
-      right: -65px;
-    }
-
-    .logo-wp{
-      img{
-        position: absolute;
-        top: 30px;
-        left: 40px;
-        width: auto;
-        height: 100px;
-      }
-    }
-
-    .login-button-wp{
-      img{
-        position: absolute;
-        top: 140px;
-        left: 240px;
-        transform: scale(0.9);
-        transition: all .2s ease-in-out;
-        &:hover{
-          transition: all .2s ease-in-out;
-          transform: scale(1.1);
-        }
-      }
-    }
-
-    .text-wp{
-      color: honeydew;
-      font-size: 15px;
-      position: absolute;
-      top: 299px;
-      left: 20px;
-      width: 272px;
+      top: 30px;
+      left: 40px;
+      width: auto;
       height: 100px;
-
     }
+  }
+
+  .login-button-wp {
+    img {
+      position: absolute;
+      top: 140px;
+      left: 240px;
+      transform: scale(0.9);
+      transition: all .2s ease-in-out;
+      &:hover {
+        transition: all .2s ease-in-out;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .text-wp {
+    color: honeydew;
+    font-size: 15px;
+    position: absolute;
+    top: 299px;
+    left: 20px;
+    width: 272px;
+    height: 100px;
 
   }
+
+}
 
 
 

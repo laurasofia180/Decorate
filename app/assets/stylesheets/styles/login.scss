@@ -1,30 +1,53 @@
-.bg-image-wp{
-  position: relative;
-  top:0;
-  .bg-img{
-    width: 100%;
-    height: auto;
-  }
+.bg-image-wp {
+  background-image: url("Fondo.png");
+  width: auto;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  z-index: -9999;
+}
 
-  .bg-login {
-    background: image_url("elPNdeSofi.png");
-    position: absolute;
-    top: 30px;
-    left: 530px;
-
-    .login-wp {
-
+.login-outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  .login-middle {
+    display: table-cell;
+    vertical-align: middle;
+    .login-inner {
+      display: table;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 500px;
+      background-image: url(elPNdeSofi.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      opacity: 0.8;
+      animation: appear 1s;
+      animation-timing-function: ease-in-out;
+      .form-wp {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
   }
 }
-/*
-img {
-  position: absolute;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.7;
-  width: 39%;
-  top: 94px;
-  left: 400px
-}*/
+
+@-webkit-keyframes appear {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
