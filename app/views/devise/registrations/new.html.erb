@@ -1,54 +1,60 @@
-<div class="image">
-  <h2>Sign up</h2>
+<div class="bg-image-wp"></div>
+<div class="signUp-outer">
+  <div class="signUp-middle">
+    <div class="signUp-inner">
+      <div class="form-wp">
+        <h2>Sign up</h2>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
+            <div class="field">
+              <%= f.label :email %><br/>
+              <%= f.email_field :email, autofocus: true %>
+            </div>
 
-      <div class="field">
-        <%= f.label :email %><br/>
-        <%= f.email_field :email, autofocus: true %>
+            <div class="field">
+              <%= f.label :nombre %>
+              <%= f.text_field :nombre %>
+            </div>
+
+            <div class="field">
+              <%= f.label :genero %>
+              <%= f.radio_button :genero, true %> Femenino
+              <%= f.radio_button :genero, false %> Masculino
+            </div>
+
+            <div class="field">
+              <%= label_tag(:edad, "Edad") %>
+              <%= text_field_tag(:edad) %>
+            </div>
+
+            <div class="field">
+              <%= f.label :estilo %>
+              <%= f.radio_button :estilo, "clasico" %> Clasico
+              <%= f.radio_button :estilo, "moderno" %> Moderno
+              <%= f.radio_button :estilo, "retro" %> Retro
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br/>
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br/>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign up" %>
+            </div>
+        <% end %>
+        <%= render "devise/shared/links" %>
+
       </div>
-
-      <div class="field">
-        <%= f.label :nombre %>
-        <%= f.text_field :nombre %>
-      </div>
-
-      <div class="field">
-        <%= f.label :genero %>
-        <%= f.radio_button :genero, true %> Femenino
-        <%= f.radio_button :genero, false %> Masculino
-      </div>
-
-      <div class="field">
-        <%= label_tag(:edad, "Edad") %>
-        <%= text_field_tag(:edad) %>
-      </div>
-
-      <div class="field">
-        <%= f.label :estilo %>
-        <%= f.radio_button :estilo, "clasico" %> Clasico
-        <%= f.radio_button :estilo, "moderno" %> Moderno
-        <%= f.radio_button :estilo, "retro" %> Retro
-      </div>
-
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br/>
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br/>
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
-  <% end %>
-  <%= render "devise/shared/links" %>
+    </div>
+  </div>
 </div>
-
